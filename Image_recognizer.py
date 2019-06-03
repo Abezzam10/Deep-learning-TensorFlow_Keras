@@ -72,11 +72,10 @@ model.add(Activation("relu"))
 model.add(MaxPooling2D(pool_size=(2,2)))
 model.add(Flatten())
 model.add(Dense(64))
-
+model.add(Activation("relu"))
 model.add(Dense(1))
 model.add(Activation("sigmoid"))
 
 model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy"])
 
 model.fit(X,y, batch_size=32, validation_split=0.1)
-
