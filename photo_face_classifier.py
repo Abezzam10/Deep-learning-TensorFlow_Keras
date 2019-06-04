@@ -13,7 +13,7 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 np.array(image, dtype=np.uint8)
 
 # Detect faces in the image
-faces = faceCascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30), flags = cv2.HAAR_SCALE_IMAGE)
+faces = faceCascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30), flags = cv2.cv.HAAR_SCALE_IMAGE)
 
 print("Found {0} faces!".format(len(faces)))
 
